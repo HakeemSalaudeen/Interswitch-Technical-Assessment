@@ -2,8 +2,6 @@
 
 A comprehensive solution covering advanced SQL analysis, data scripting, and automated data pipeline orchestration.
 
----
-
 ## 📁 Project Structure
 
 ```
@@ -89,15 +87,21 @@ This Apache Airflow DAG automates a complete ETL workflow that:
 3. **Loads** validated data into ClickHouse
 4. **Notifies** via email on success or failure
 
-~/airflow/dags/
+```
+airflow/dags/
+│
 ├── weekend_trip_report.py
+│
 ├── email_alert/
 │   └── email_alert.py
+│
 ├── include/
-│   ├── load_to_ch.py
+│   └── load_to_ch.py
 │   └── validate_data.py
-└── sql/
-    └── weekend_trips.sql
+│
+├── sql/
+   └── weekend_trips.sql
+```
 
 **DAG Name:** `weekend_trip_report`
 **Schedule:** Configurable (default: Daily)
@@ -105,8 +109,6 @@ This Apache Airflow DAG automates a complete ETL workflow that:
 
 ## 🏗️ Architecture
 ![alt text](image.png)
-
-## 📦 Prerequisites
 
 ### System Requirements
 
